@@ -38,10 +38,23 @@ We’re using shell module to run ‘echo hello world’ in localhost. Now lets 
 
 ## Much simpler way to run
 
-Wouldn’t it be cool if we just have to say ansible-playbook helloworld.yml instead of ansible-playbook -i "localhost," -c local helloworld.yml
-It’s easy to do it using default inventory file /etc/ansible/hosts. Just add an entry for localhost as given below:
-localhost ansible_connection=local
+Wouldn’t it be cool if we just have to say 
+
+  ansible-playbook helloworld.yml 
+  
+instead of 
+
+  ansible-playbook -i "localhost," -c local helloworld.yml
+  
+It’s easy to do it using default inventory file `/etc/ansible/hosts`. 
+Just add an entry for localhost as given below:
+
+  localhost ansible_connection=local
+  
 That’s it. Now run playbooks in localhost just by saying 
-$ ansible-playbook helloworld.yml
+
+  $ ansible-playbook helloworld.yml
+
 and for adhoc command, 
-$ ansible all -m shell -a 'echo hello world’
+
+  $ ansible all -m shell -a 'echo hello world’
