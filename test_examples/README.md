@@ -53,8 +53,8 @@ Just add an entry for localhost as given below:
   
 That’s it. Now run playbooks in localhost just by saying 
 
-  $ ansible-playbook helloworld.yml
+  > $ ansible-playbook helloworld.yml
 
 and for adhoc command, 
 
-  $ ansible all -m shell -a 'echo hello world’
+  > $ ansible all -m shell -a 'echo hello world’
